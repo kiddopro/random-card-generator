@@ -1,31 +1,54 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+
 div.card {
   width: 250px;
   margin: 150px auto;
   height: 350px;
-  background-color: red;
+  background-color: white;
 }
 
-div.card i.heart {
+div.card span.heart {
   text-align: center;
-  padding-top: 175px;
-  color: white;
+  padding-top: 125px;
+  color: red;
+  font-size: 50px;
 }
 
-div.card i.diamond {
+div.card span.diamond {
   text-align: center;
-  padding-top: 175px;
-  color: white;
+  padding-top: 125px;
+  color: red;
+  font-size: 50px;
 }
 
-div.card i.club {
+div.card span.club {
   text-align: center;
-  padding-top: 175px;
-  color: white;
+  padding-top: 125px;
+  color: black;
+  font-size: 50px;
 }
 
-div.card i.spade {
+div.card span.spade {
   text-align: center;
-  padding-top: 175px;
-  color: white;
+  padding-top: 125px;
+  color: black;
+  font-size: 50px;
+}
+
+div.card span.numberCardBlack {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+}
+
+div.card span.numberCardRed {
+  color: red;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
 }
