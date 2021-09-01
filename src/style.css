@@ -9,6 +9,7 @@ div.card {
   margin: 150px auto;
   height: 350px;
   background-color: white;
+  box-shadow: 0 0 12px white;
 }
 
 div.card span.heart {
