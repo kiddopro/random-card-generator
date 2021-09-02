@@ -60,4 +60,5 @@ div.card div.numberCardRed {
   align-self: flex-end;
   margin-top: 25%;
   padding-right: 10px;
+  transform: rotateX(180deg);
 }
