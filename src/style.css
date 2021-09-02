@@ -4,11 +4,16 @@ body {
   background-color: green;
 }
 
+#btn {
+  text-align: center;
+  background-color: yellow;
+}
+
 div.card {
   overflow: hidden;
   position: relative;
   width: 250px;
-  margin: 150px auto;
+  margin: auto;
   height: 350px;
   background-color: white;
   box-shadow: 0 0 12px white;
