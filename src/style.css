@@ -5,51 +5,59 @@ body {
 }
 
 div.card {
+  overflow: hidden;
+  position: relative;
   width: 250px;
   margin: 150px auto;
   height: 350px;
   background-color: white;
   box-shadow: 0 0 12px white;
+  display: flex;
+  flex-direction: column;
 }
 
-div.card span.heart {
-  text-align: center;
-  padding-top: 125px;
+div.card div.heart {
   color: red;
   font-size: 50px;
 }
 
-div.card span.diamond {
-  text-align: center;
-  padding-top: 125px;
+div.card div.diamond {
   color: red;
   font-size: 50px;
 }
 
-div.card span.club {
-  text-align: center;
-  padding-top: 125px;
+div.card div.club {
   color: black;
   font-size: 50px;
 }
 
-div.card span.spade {
-  text-align: center;
-  padding-top: 125px;
+div.card div.spade {
   color: black;
   font-size: 50px;
 }
 
-div.card span.numberCardBlack {
-  text-align: center;
+div.card div.numberCardBlack {
   font-size: 50px;
+  margin-top: 25%;
   font-weight: bold;
   color: black;
+  align-self: center;
 }
 
-div.card span.numberCardRed {
+div.card div.numberCardRed {
   color: red;
-  text-align: center;
   font-size: 50px;
+  margin-top: 25%;
   font-weight: bold;
+  align-self: center;
+}
+
+.top {
+  align-self: flex-start;
+  padding-left: 10px;
+}
+.bottom {
+  align-self: flex-end;
+  margin-top: 25%;
+  padding-right: 10px;
 }

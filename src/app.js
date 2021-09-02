@@ -26,14 +26,17 @@ window.onload = function() {
 
   //obtenemos los elementos y creamos algunos necesarios
   let card = document.querySelector(".card");
-  let suitSpan = document.createElement("span");
-  let numberSpan = document.createElement("span");
+  let suitSpanTop = document.createElement("div");
+  let suitSpanBottom = document.createElement("div");
+  let numberSpan = document.createElement("div");
 
   //le asignamos como clase el nombre del tipo de carta (diamond, heart, club, spade)
-  suitSpan.className = randomSuit;
+  suitSpanTop.className = randomSuit + " top";
+  suitSpanBottom.className = randomSuit + " bottom";
 
   //le pasamos como elemento o texto el ícono que corresponde según el tipo de carta
-  suitSpan.innerHTML = icon;
+  suitSpanTop.innerHTML = icon;
+  suitSpanBottom.innerHTML = icon;
 
   //según el tipo de carta es el color del número que se muestra en la carta (si es diamante o corazón los colores son en rojo)
   randomSuit === "heart" || randomSuit === "diamond"
@@ -42,6 +45,7 @@ window.onload = function() {
   numberSpan.innerHTML = randomNumber; //aquí le pasamos como valor el numero random a la etiqueta span
 
   //se las agregamos a la etiqueta div.card
-  card.appendChild(suitSpan);
+  card.appendChild(suitSpanTop);
   card.appendChild(numberSpan);
+  card.appendChild(suitSpanBottom);
 };
