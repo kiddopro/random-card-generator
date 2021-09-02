@@ -67,7 +67,7 @@ document.getElementById("btn").addEventListener("click", function() {
       ? "♣"
       : "♠";
   let randomNumber = number[Math.floor(Math.random() * number.length)];
-  console.log(icon);
+
   //obtenemos los elementos y creamos algunos necesarios
   let card = document.querySelector(".card");
 
