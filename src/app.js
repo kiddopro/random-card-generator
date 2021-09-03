@@ -67,3 +67,37 @@ window.setInterval(function() {
 document.getElementById("btn").addEventListener("click", function() {
   createCard();
 });
+
+
+//aquí comienza la creacion de la carta según su width o height
+let valorWidth = undefined;
+let valorHeigth = undefined;
+
+document.querySelector("#input-width").addEventListener("input", function() {
+  valorWidth = document.querySelector("#input-width").value + "px";
+  valorWidth = valorWidth === "px" ? undefined : valorWidth;
+  createCard(valorWidth, valorHeigth);
+});
+document.querySelector("#input-height").addEventListener("input", function() {
+  valorHeigth = document.querySelector("#input-height").value + "px";
+  valorHeigth = valorHeigth === "px" ? undefined : valorHeigth;
+  createCard(valorWidth, valorHeigth);
+});
+// document
+//   .getElementById("input-width")
+//   .addEventListener("change", function (event) {
+//     valorWidth = document.querySelector("#input-width").value + "px";
+//     valorWidth = valorWidth === "px" ? undefined : valorWidth;
+//     createCard(valorWidth, valorHeigth);
+//     console.log(valorWidth);
+//   });
+
+// document
+//   .getElementById("input-height")
+//   .addEventListener("change", function (event) {
+//     valorHeigth = document.querySelector("#input-height").value + "px";
+//     valorHeigth = valorHeigth === "px" ? undefined : valorHeigth;
+//     createCard(valorWidth, valorHeigth);
+//     console.log(valorHeigth);
+//   });
+
