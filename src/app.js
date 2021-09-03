@@ -9,7 +9,7 @@ import "./assets/img/4geeks.ico";
 let suit = ["heart", "diamond", "club", "spade"]; // ♦ ♥ ♠ ♣
 let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "king", "queen", "jack", "ace"];
 
-const createCard = () => {
+const createCard = (width, height) => {
   // //declaramos las variables necesarias con sus valores
   // let suit = ["heart", "diamond", "club", "spade"]; // ♦ ♥ ♠ ♣
   // let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "king", "queen", "jack", "ace"];
@@ -29,6 +29,9 @@ const createCard = () => {
   //obtenemos los elementos y creamos algunos necesarios
   let card = document.querySelector(".card");
   card.innerHTML = "";
+  width || height
+    ? [(card.style.width = width), (card.style.height = height)]
+    : [(card.style.width = "250px"), (card.style.height = "350px")];
   let suitSpanTop = document.createElement("div");
   let suitSpanBottom = document.createElement("div");
   let numberSpan = document.createElement("div");
@@ -68,7 +71,6 @@ document.getElementById("btn").addEventListener("click", function() {
   createCard();
 });
 
-
 //aquí comienza la creacion de la carta según su width o height
 let valorWidth = undefined;
 let valorHeigth = undefined;
@@ -100,4 +102,3 @@ document.querySelector("#input-height").addEventListener("input", function() {
 //     createCard(valorWidth, valorHeigth);
 //     console.log(valorHeigth);
 //   });
-
