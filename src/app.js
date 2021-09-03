@@ -29,8 +29,8 @@ const createCard = (width, height) => {
   //obtenemos los elementos y creamos algunos necesarios
   let card = document.querySelector(".card");
   card.innerHTML = "";
-  width || height
-    ? [(card.style.width = width), (card.style.height = height)]
+  width != undefined && height != undefined
+    ? [(card.style.width = width + "px"), (card.style.height = height + "px")]
     : [(card.style.width = "250px"), (card.style.height = "350px")];
   let suitSpanTop = document.createElement("div");
   let suitSpanBottom = document.createElement("div");
@@ -75,30 +75,31 @@ document.getElementById("btn").addEventListener("click", function() {
 let valorWidth = undefined;
 let valorHeigth = undefined;
 
-document.querySelector("#input-width").addEventListener("input", function() {
-  valorWidth = document.querySelector("#input-width").value + "px";
-  valorWidth = valorWidth === "px" ? undefined : valorWidth;
-  createCard(valorWidth, valorHeigth);
-});
-document.querySelector("#input-height").addEventListener("input", function() {
-  valorHeigth = document.querySelector("#input-height").value + "px";
-  valorHeigth = valorHeigth === "px" ? undefined : valorHeigth;
-  createCard(valorWidth, valorHeigth);
-});
-// document
-//   .getElementById("input-width")
-//   .addEventListener("change", function (event) {
-//     valorWidth = document.querySelector("#input-width").value + "px";
-//     valorWidth = valorWidth === "px" ? undefined : valorWidth;
-//     createCard(valorWidth, valorHeigth);
-//     console.log(valorWidth);
-//   });
+// document.querySelector("#input-width").addEventListener("input", function() {
+//   valorWidth = document.querySelector("#input-width").value;
+//   valorWidth = valorWidth === "" ? undefined : valorWidth;
+//   createCard(valorWidth, valorHeigth);
+//   console.log(valorWidth);
+// });
+// document.querySelector("#input-height").addEventListener("input", function() {
+//   valorHeigth = document.querySelector("#input-height").value;
+//   // valorHeigth = valorHeigth === "px" ? undefined : valorHeigth;
+//   createCard(valorWidth, valorHeigth);
+// });
+document
+  .getElementById("input-width")
+  .addEventListener("change", function(event) {
+    valorWidth = document.querySelector("#input-width").value;
+    valorWidth = valorWidth === "" ? undefined : valorWidth;
+    console.log(valorWidth);
+    createCard(valorWidth, valorHeigth);
+  });
 
-// document
-//   .getElementById("input-height")
-//   .addEventListener("change", function (event) {
-//     valorHeigth = document.querySelector("#input-height").value + "px";
-//     valorHeigth = valorHeigth === "px" ? undefined : valorHeigth;
-//     createCard(valorWidth, valorHeigth);
-//     console.log(valorHeigth);
-//   });
+document
+  .getElementById("input-height")
+  .addEventListener("change", function(event) {
+    valorHeigth = document.querySelector("#input-height").value;
+    valorHeigth = valorHeigth === "" ? undefined : valorHeigth;
+    console.log(valorHeigth);
+    createCard(valorWidth, valorHeigth);
+  });
