@@ -12,9 +12,9 @@ body {
 div.card {
   overflow: hidden;
   position: relative;
-  width: 250px;
+  /* width: 250px; */
   margin: auto;
-  height: 350px;
+  /* height: 350px; */
   background-color: white;
   box-shadow: 0 0 12px white;
   display: flex;
