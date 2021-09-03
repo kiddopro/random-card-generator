@@ -4,6 +4,10 @@ body {
   background-color: green;
 }
 
+input {
+  width: 70px;
+}
+
 #btn {
   text-align: center;
   background-color: yellow;
