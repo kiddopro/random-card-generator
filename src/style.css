@@ -2,6 +2,7 @@
 
 body {
   background-color: green;
+  font-family: "Kaisei Tokumin", serif;
 }
 
 input {
@@ -14,6 +15,7 @@ input {
 }
 
 div.card {
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   /* width: 250px; */
@@ -22,7 +24,7 @@ div.card {
   background-color: white;
   box-shadow: 0 0 12px white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 div.card div.heart {
@@ -46,15 +48,18 @@ div.card div.spade {
 }
 
 div.card div.numberCardBlack {
-  font-size: 50px;
-  margin-top: 25%;
+  font-size: 70px;
+  /* margin-top: 25%; */
+  text-align: center;
   font-weight: bold;
+  flex: 0 0 33.3%;
   color: black;
   align-self: center;
 }
 
 div.card div.numberCardRed {
   color: red;
+  flex: 0 0 33.3%;
   font-size: 50px;
   margin-top: 25%;
   font-weight: bold;
@@ -63,11 +68,13 @@ div.card div.numberCardRed {
 
 .top {
   align-self: flex-start;
+  flex: 0 0 33.3%;
   padding-left: 10px;
 }
 .bottom {
+  flex: 0 0 33.3%;
   align-self: flex-end;
-  margin-top: 25%;
+  text-align: right;
   padding-right: 10px;
   transform: rotateX(180deg);
 }

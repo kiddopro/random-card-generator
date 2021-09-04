@@ -7,7 +7,7 @@ import "./assets/img/4geeks.ico";
 
 //declaramos las variables necesarias con sus valores
 let suit = ["heart", "diamond", "club", "spade"]; // ♦ ♥ ♠ ♣
-let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "king", "queen", "jack", "ace"];
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "K", "Q", "J", "A"];
 
 const createCard = (width, height) => {
   // //declaramos las variables necesarias con sus valores
@@ -45,9 +45,10 @@ const createCard = (width, height) => {
   suitSpanBottom.innerHTML = icon;
 
   //según el tipo de carta es el color del número que se muestra en la carta (si es diamante o corazón los colores son en rojo)
-  randomSuit === "heart" || randomSuit === "diamond"
-    ? (numberSpan.className = "numberCardRed")
-    : (numberSpan.className = "numberCardBlack");
+  // randomSuit === "heart" || randomSuit === "diamond"
+  //   ? (numberSpan.className = "numberCardRed")
+  //   : (numberSpan.className = "numberCardBlack");
+  numberSpan.className = "numberCardBlack";
   numberSpan.innerHTML = randomNumber; //aquí le pasamos como valor el numero random a la etiqueta span
 
   //se las agregamos a la etiqueta div.card
